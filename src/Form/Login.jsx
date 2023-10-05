@@ -14,7 +14,7 @@ const Login = () => {
      siginIn(email,password)
      .then(() => {
       toast.success('Successfully Login!')
-      navigate(state )
+      navigate(state ? state : '/')
      })
      .catch(error=> toast.error(`${error.message.slice(22,).replace(')','')}`))
   }
